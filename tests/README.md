@@ -57,8 +57,8 @@ For more information, see a [quick introduction testing](https://miguelgfierro.c
 AzureML is used to run the existing unit, smoke and integration tests. AzureML benefits include being able to run the tests in parallel, managing the compute environment by automatically turning it on/off, automatic logging of artifacts from test runs and more. GitHub is used as a control plane to configure and run the tests on AzureML.  
 
 In the following figure we show a workflow on how the tests are executed via AzureML:
-https://raw.githubusercontent.com/recommenders-team/resources/main/images/
-<img src="https://recodatasets.z20.web.core.windows.net/images/AzureML_tests.svg?sanitize=true">
+
+<img src="https://raw.githubusercontent.com/recommenders-team/resources/main/images/AzureML_tests.svg?sanitize=true">
 
 GitHub workflows `azureml-unit-tests.yml`, `azureml-cpu-nightly.yml`, `azureml-gpu-nightly.yml` and `azureml-spark-nightly` located in [.github/workflows/](../.github/workflows/) are used to run the tests on AzureML. The parameters to configure AzureML are defined in the workflow yml files. The tests are divided into groups and each workflow triggers these test groups in parallel, which significantly reduces end-to-end execution time. 
 
